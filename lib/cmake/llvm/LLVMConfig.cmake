@@ -167,7 +167,7 @@ if(LLVM_ENABLE_ZLIB)
   find_package(ZLIB)
 endif()
 
-set(LLVM_ENABLE_LIBXML2 )
+set(LLVM_ENABLE_LIBXML2 1)
 if(LLVM_ENABLE_LIBXML2)
   find_package(LibXml2)
 endif()
@@ -182,8 +182,8 @@ set(LLVM_ENABLE_PIC ON)
 
 set(LLVM_BUILD_32_BITS OFF)
 
-if (NOT "-lpthread" STREQUAL "")
-  set(LLVM_PTHREAD_LIB "-lpthread")
+if (NOT "" STREQUAL "")
+  set(LLVM_PTHREAD_LIB "")
 endif()
 
 set(LLVM_ENABLE_PLUGINS ON)
